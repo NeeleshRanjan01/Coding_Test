@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 30px;
+    text-shadow: 4px 4px 4px aquamarine;
+}
+
+.parent {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.shape {
+    border: 2px solid aquamarine;
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 10px 10px 15px white;
+    transition-duration: 4s;
+    margin-bottom: 50px;
+}
+
+.forHover1:hover {
+    transform: rotateZ(860deg);
+}
+
+.forHover2:hover {
+    transform: rotateZ(860deg);
+}
+
+.forHover3:hover {
+    transform: rotateZ(860deg);
+}
+
+.forHover4:hover {
+    transform: rotateZ(860deg);
+}
+
+.forHover5:hover {
+    transform: rotateZ(860deg);
+}
+
+
+@media screen and (max-width:320px) {
+    .parent {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .shape {
+        animation: shapeAnimation;
+        animation-duration: 3s;
+    }
+
+    @keyframes shapeAnimation {
+        from {
+            transform: translate(-100%, 0);
+        }
+
+        to {
+            transform: translate(0, 0);
+        }
+    }
+}
